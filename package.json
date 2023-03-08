@@ -2,6 +2,7 @@
   "name": "littlewebcorner",
   "type": "module",
   "version": "0.0.1",
+  "license": "BSD-3-Clause",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,5 +14,12 @@
     "@astrojs/mdx": "^0.17.2",
     "@astrojs/netlify": "^2.2.0",
     "astro": "^2.1.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.35.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "rehype-pretty-code": "^0.9.4",
+    "shiki": "^0.14.1"
   }
 }
