@@ -7,10 +7,12 @@ const prettyCodeOptions = {
   theme: "solarized-dark",
   onVisitLine(node) {
     if (node.children.length === 0) {
-      node.children = [{
-        type: "text",
-        value: " "
-      }];
+      node.children = [
+        {
+          type: "text",
+          value: " ",
+        },
+      ];
     }
   },
   onVisitHighlightedLine(node) {
@@ -19,9 +21,8 @@ const prettyCodeOptions = {
   onVisitHighlightedWord(node) {
     node.properties.className = ["word"];
   },
-  tokensMap: {}
+  tokensMap: {},
 };
-
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,8 +30,8 @@ export default defineConfig({
   markdown: {
     extendDefaultPlugins: true,
     syntaxHighlight: false,
-    rehypePlugins: [[rehypePrettyCode, prettyCodeOptions]]
+    rehypePlugins: [[rehypePrettyCode, prettyCodeOptions]],
   },
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
 });

@@ -15,11 +15,43 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
-    <slot />
+    <main class="main-content">
+      <canvas></canvas>
+      <article class="article-content">
+        <h3 class="base-title">{pageTitle}</h3>
+        <slot />
+      </article>
+    </main>
     <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
   </body>
 </html>
+<style>
+  body {
+    background-color: var(--ctp-latte-base);
+    /* background-color: red; */
+  }
+
+  .main-content {
+    display: flex;
+    align-content: center;
+    flex-flow: column wrap;
+  }
+
+  .main-content a {
+    display: flex;
+    gap: 10px;
+  }
+
+  .base-title {
+    border-radius: 0.5rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: var(--ctp-latte-mantle);
+  }
+
+  .article-content {
+    max-width: 60ch;
+  }
+</style>

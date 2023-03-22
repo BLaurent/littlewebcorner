@@ -17,8 +17,9 @@ const { frontmatter } = Astro.props;
       ))
     }
   </div>
-  <slot />
+  <slot class="post-content" />
 </BaseLayout>
+
 <style>
   a {
     color: #00539f;
@@ -35,7 +36,14 @@ const { frontmatter } = Astro.props;
     border: dotted 1px #a1a1a1;
     border-radius: 0.5em;
     padding: 0.5em 1em;
-    font-size: 1.15em;
+    /* font-size: 1.15em; */
     background-color: #f8fcfd;
+  }
+
+  .post-content {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    /* background-color: red; */
   }
 </style>

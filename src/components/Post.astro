@@ -1,0 +1,18 @@
+---
+const { title, url } = Astro.props;
+---
+
+<style>
+  .post-link {
+    color: var(--ctp-latte-rosewater);
+  }
+  .post-link:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<li>
+  <a href={url} class="post-link">
+    {title}
+  </a>
+</li>
