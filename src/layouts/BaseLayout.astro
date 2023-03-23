@@ -17,41 +17,44 @@ const { pageTitle } = Astro.props;
     <Header />
     <main class="main-content">
       <canvas></canvas>
-      <article class="article-content">
+      <article>
         <h3 class="base-title">{pageTitle}</h3>
-        <slot />
+        <div class="article-content"><slot /></div>
       </article>
     </main>
     <Footer />
   </body>
+
+  <style>
+    body {
+      background-color: var(--ctp-latte-base);
+    }
+
+    .main-content {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-flow: column wrap;
+      padding: 30px;
+    }
+
+    .main-content a {
+      display: flex;
+      gap: 10px;
+    }
+
+    .base-title {
+      border-radius: 0.5rem;
+      padding: 10px;
+      text-align: center;
+      background-color: var(--ctp-latte-mantle);
+    }
+
+    .article-content {
+      width: 100%;
+      max-width: 60ch;
+      text-align: justify;
+      text-indent: 1em;
+    }
+  </style>
 </html>
-<style>
-  body {
-    background-color: var(--ctp-latte-base);
-    /* background-color: red; */
-  }
-
-  .main-content {
-    display: flex;
-    align-content: center;
-    flex-flow: column wrap;
-  }
-
-  .main-content a {
-    display: flex;
-    gap: 10px;
-  }
-
-  .base-title {
-    border-radius: 0.5rem;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    backdrop-filter: blur(10px);
-    background-color: var(--ctp-latte-mantle);
-  }
-
-  .article-content {
-    max-width: 60ch;
-  }
-</style>
