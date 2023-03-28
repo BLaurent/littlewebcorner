@@ -8,13 +8,13 @@
     align-items: center;
     justify-content: center;
     background: var(--ctp-latte-surface0);
-    border-radius: 20%;
+    border-radius: 0.5rem;
     width: 40px;
     height: 40px;
   }
   .hamburger:active {
     background: var(--ctp-latte-mauve);
-    border-radius: 20%;
+    border-radius: 0.5rem;
   }
 
   .hamburger svg {
@@ -34,15 +34,14 @@
     inset: 0px 0px auto auto;
     transform: translate3d(-8px, 56px, 0px);
     display: flex;
-    min-width: 100px;
+    min-width: 8rem;
     position: fixed;
     flex-direction: column;
     align-items: flex-start;
-    border-radius: 10%;
+    border-radius: 0.5rem;
     gap: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     background-color: var(--ctp-latte-crust);
-    z-index: 2;
   }
 
   .dropdown-visible a {
@@ -52,7 +51,7 @@
     opacity: 1;
   }
 
-  @media screen and (min-width: 636px) {
+  @media screen and (min-width: 48em) {
     .hamburger {
       display: none;
     }

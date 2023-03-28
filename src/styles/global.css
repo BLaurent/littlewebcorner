@@ -21,3 +21,21 @@
   text-decoration: none;
   list-style: none;
 }
+
+div[data-rehype-pretty-code-fragment] {
+  overflow: auto;
+
+  /* stylist preferences */
+  border-radius: 0.5rem;
+}
+
+div[data-rehype-pretty-code-fragment] pre {
+  overflow-x: auto;
+  scrollbar-width: auto;
+
+  /* stylist preferences */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
