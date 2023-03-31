@@ -23,8 +23,8 @@
 }
 
 div[data-rehype-pretty-code-fragment] {
-  overflow: auto;
-
+  overflow-x: auto;
+  font-size: 0.6rem;
   /* stylist preferences */
   border-radius: 0.5rem;
 }
@@ -32,6 +32,7 @@ div[data-rehype-pretty-code-fragment] {
 div[data-rehype-pretty-code-fragment] pre {
   overflow-x: auto;
   scrollbar-width: auto;
+  font-size: 0.6rem;
 
   /* stylist preferences */
   padding-top: 0.5rem;
