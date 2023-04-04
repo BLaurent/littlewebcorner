@@ -15,8 +15,10 @@
     "@astrojs/netlify": "^2.2.0",
     "@astrojs/rss": "^2.2.0",
     "@astrojs/solid-js": "^2.1.0",
+    "@astrojs/ts-plugin": "^0.4.4",
     "astro": "^2.1.0",
-    "solid-js": "1.6.12"
+    "solid-js": "^1.6.12",
+    "three": "^0.151.3"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.54.1",
